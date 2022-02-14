@@ -1,0 +1,335 @@
+
+<?php $__env->startSection('title', 'Email Compose'); ?>
+
+<?php $__env->startSection('css'); ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('style'); ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('breadcrumb-title'); ?>
+<h3> ارسال رسالة Watsapp </h3>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('breadcrumb-items'); ?>
+<li class="breadcrumb-item">التسويق</li>
+<li class="breadcrumb-item active"> ارسال رسالة Watsapp</li>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+<div class="container-fluid">
+    <div class="email-wrap">
+       <div class="row">
+
+          <div class="col-xl-6 col-md-12 box-col-12">
+             <div class="email-right-aside">
+                <div class="card email-body radius-left">
+                   <div class="ps-0">
+                      <div class="tab-content">
+                         <div class="tab-pane fade active show" id="pills-darkhome" role="tabpanel" aria-labelledby="pills-darkhome-tab">
+                            <div class="email-compose">
+                               
+                               <div class="email-wrapper">
+                                  <form class="theme-form">
+
+                                        <label for="">عملاء خدمة</label>
+                                        <select class="form-select mb-3" >
+                                            <option selected value="1">مقيم</option>
+                                            <option value="1">تم</option>
+                                            <option value="2">شموس</option>
+                                            <option value="3">راية</option>
+                                            <option value="4">مسارات</option>
+                                        </select>
+                                        
+                                        <label for="">حالة الاشتراك</label>
+                                        <select class="form-select mb-3" >
+                                            <option selected value="1">نشط</option>
+                                            <option value="2">منتهي</option>
+                                            <option value="2">جديد</option>
+                                            <option value="2">قارب على الانتهاء </option>
+                                        </select>    
+
+                                        <div class="row">
+                                            <div class=" col-md-6">
+                                                <label for=""> تاريخ الانتهاء  من</label>
+                                                <input type="date" class="form-control" name="" id="">
+                                            </div>
+
+                                            <div class=" col-md-6">
+                                                <label for="">الى</label>
+                                                <input type="date" class="form-control" name="" id="">
+                                            </div>
+                                         </div>
+
+
+                                        <div class="row">
+                                            <div class=" col-md-6">
+                                                <label for=""> تاريخ الاشتراك  من</label>
+                                                <input type="date" class="form-control" name="" id="">
+                                            </div>
+                                            <div class=" col-md-6">
+                                                <label for="">الى</label>
+                                                <input type="date" class="form-control" name="" id="">
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="row mb-3">
+                                            <div class=" col-md-6">
+                                                <label for=""> تاريخ التجديد القادم  من</label>
+                                                <input type="date" class="form-control" name="" id="">
+                                            </div>
+                                            <div class=" col-md-6">
+                                                <label for="">الى</label>
+                                                <input type="date" class="form-control" name="" id="">
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary btn-block btn-mail text-center mb-3 mt-0 w-100"  type="button"><i class="fa fa-search me-2"></i>بحث</button>
+                                  </form>
+
+                                  <table class="table table-striped">
+                                     <thead>
+                                       <tr>
+                                         <th>#</th>
+                                         <th>  <input type="checkbox" name="" id="">تحديد </th> 
+                                         <th><?php echo app('translator')->get('lang.Name'); ?></th>
+                                         <th><?php echo app('translator')->get('lang.phone'); ?></th>
+                                         <th><?php echo app('translator')->get('lang.address'); ?></th>
+                                         <th>اجراء</th>
+                                       </tr>
+                                     </thead>
+                                     <tbody>
+                                         <?php for($i = 0; $i < 5; $i++): ?>
+                                            <tr>
+                                                <td><?php echo e($i+1); ?></td>
+                                                <td><input type="checkbox" name="" id=""> </td>
+                                                <td>حمدان على عيد</td>
+                                                <td>0505595956</td>
+                                                <td>السعودية</td>
+                                                <td class="d-flex ">
+                                                    <a href="#" class="btn btn-danger mx-2  p-2">
+                                                        <i class="bi bi-trash"></i>
+                                                        <?php echo app('translator')->get('lang.delete'); ?>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                         <?php endfor; ?>
+                                     </tbody>
+                                  </table>
+
+                                  <button class="btn btn-primary btn-block btn-mail text-center mb-3 mt-0 w-100"  type="button"><i class="fa fa-plus me-2"></i>اضافة</button>
+                               </div>   
+                            </div>
+                         </div>
+
+                         <div class="tab-pane fade" id="pills-darkprofile" role="tabpanel" aria-labelledby="pills-darkprofile-tab">
+                            <div class="email-content">
+                               <div class="email-top">
+                                  <div class="row">
+                                     <div class="col-md-6 xl-100 col-sm-12">
+                                        <div class="media">
+                                           <img class="me-3 rounded-circle" src="<?php echo e(asset('assets/images/user/user.png')); ?>" alt="">
+                                           <div class="media-body">
+                                              <h6>Lorm lpsa  <small><span>(20</span> January) <span>6:00</span> AM</small></h6>
+                                              <p>Mattis luctus. Donec nisi diam text.</p>
+                                           </div>
+                                        </div>
+                                     </div>
+                                     <div class="col-md-6 xl-100 col-sm-12">
+                                        <div class="float-end d-flex">
+                                           <p class="user-emailid">Lormlpsa<span>23</span>@company.com</p>
+                                           <i class="fa fa-star-o f-18 mt-1"></i>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </div>
+                               <div class="email-wrapper">
+                                  <p>Hello</p>
+                                  <p>Dear Sir Good Morning,</p>
+                                  <h5>Elementum varius nisi vel tempus. Donec eleifend egestas viverra.</h5>
+                                  <p class="m-b-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non diam facilisis, commodo libero et, commodo sapien. Pellentesque sollicitudin massa sagittis dolor facilisis, sit amet vulputate nunc molestie. Pellentesque maximus nibh id luctus porta. Ut consectetur dui nec nulla mattis luctus. Donec nisi diam, congue vitae felis at, ullamcorper bibendum tortor. Vestibulum pellentesque felis felis. Etiam ac tortor felis. Ut elit arcu, rhoncus in laoreet vel, gravida sed tortor.</p>
+                                  <p>In elementum varius nisi vel tempus. Donec eleifend egestas viverra. Donec dapibus sollicitudin blandit. Donec scelerisque purus sit amet feugiat efficitur. Quisque feugiat semper sapien vel hendrerit. Mauris lacus felis, consequat nec pellentesque viverra, venenatis a lorem. Sed urna lectus.Quisque feugiat semper sapien vel hendrerit</p>
+                                  <hr>
+                                  <div class="d-inline-block">
+                                     <h6 class="text-muted"><i class="icofont icofont-clip"></i> ATTACHMENTS</h6>
+                                     <a class="text-muted text-end right-download" href="#"><i class="fa fa-long-arrow-down me-2"></i>Download All</a>
+                                     <div class="clearfix"></div>
+                                  </div>
+                                  <div class="attachment">
+                                     <ul class="list-inline">
+                                        <li class="list-inline-item"><img class="img-fluid" src="<?php echo e(asset('assets/images/email/1.jpg')); ?>" alt=""></li>
+                                        <li class="list-inline-item"><img class="img-fluid" src="<?php echo e(asset('assets/images/email/2.jpg')); ?>" alt=""></li>
+                                        <li class="list-inline-item"><img class="img-fluid" src="<?php echo e(asset('assets/images/email/3.jpg')); ?>" alt=""></li>
+                                     </ul>
+                                  </div>
+                                  <hr>
+                                  <div class="action-wrapper">
+                                     <ul class="actions">
+                                        <li><a class="text-muted" href="#"><i class="fa fa-reply me-2"></i>Reply</a></li>
+                                        <li><a class="text-muted" href="#"><i class="fa fa-reply-all me-2"></i>Reply All</a></li>
+                                        <li><a class="text-muted" href="#"><i class="fa fa-share me-2"></i></a>Forward</li>
+                                     </ul>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                       </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+         
+          <div class="col-xl-6 col-md-12 box-col-12">
+             <div class="email-right-aside">
+                <div class="card email-body radius-left">
+                   <div class="ps-0">
+                      <div class="tab-content">
+                         <div class="tab-pane fade active show" id="pills-darkhome" role="tabpanel" aria-labelledby="pills-darkhome-tab">
+                            <div class="email-compose">
+                               <div class="email-top compose-border">
+                                  <div class="row">
+                                     <div class="col-sm-8 xl-50">
+                                        <h4 class="mb-0">رسالة جديدة</h4>
+                                     </div>
+                                     
+                                  </div>
+                               </div>
+                               <div class="email-wrapper">
+                                  <form class="theme-form">
+                                     <div class="mb-3">
+                                        <label class="col-form-label pt-0" for="exampleInputEmail1">الى</label>
+                                        <input class="form-control" id="exampleInputEmail1" type="email">
+                                     </div>
+                                     <div class="mb-3">
+                                        <label class="col-form-label pt-0" for="exampleInputEmail1">الموضوع</label>
+                                        <input class="form-control" id="exampleInputEmail1" type="email">
+                                     </div>
+                                     <div class="mb-3">
+                                        <label for="exampleInputPassword1">اسم الحملة الاعلانية</label>
+                                        <input class="form-control" id="exampleInputPassword1" type="text">
+                                     </div>
+                                     <div class="mb-3">
+                                        <label for="">اختر اسم الجروب </label>
+                                        <select class="form-select mb-3" >
+                                            <option selected value="1"></option>
+                                            <option value="1"></option>
+                                            <option value="2"></option>
+                                            <option value="3"></option>
+                                            <option value="4"></option>
+                                        </select>
+                                     </div>
+                                     <div class="mb-3 row">
+                                         <div class="col-md-6">
+                                            <label for="exampleInputPassword1">تاريخ النشر</label>
+                                            <input class="form-control" id="exampleInputPassword1" type="date">
+                                         </div>
+                                         <div class="col-md-6">
+                                            <label for="exampleInputPassword1">وقت النشر</label>
+                                            <input class="form-control" id="exampleInputPassword1" type="time">
+                                         </div>
+                                     </div>
+                                     <div>
+                                        <hr>
+                                        <div class="d-inline-block">
+                                           <h6 class="text-muted"><i class="icofont icofont-clip"></i> المرفقات</h6>
+                                           <a class="text-muted text-end right-download" href="#"><i class="fa fa-long-arrow-down me-2"></i>تحميل الكل</a>
+                                           <div class="clearfix"></div>
+                                        </div>
+                                        <div class="attachment">
+                                           <ul class="list-inline">
+                                              <li class="list-inline-item"><img class="img-fluid" src="<?php echo e(asset('assets/images/email/1.jpg')); ?>" alt=""></li>
+                                              <li class="list-inline-item"><img class="img-fluid" src="<?php echo e(asset('assets/images/email/2.jpg')); ?>" alt=""></li>
+                                              <li class="list-inline-item"><img class="img-fluid" src="<?php echo e(asset('assets/images/email/3.jpg')); ?>" alt=""></li>
+                                           </ul>
+                                        </div>
+                                        <hr>
+                                     </div>
+                                     <div>
+                                        <label class="text-muted">الرسالة</label>
+                                        <textarea id="text-box" name="text-box" cols="10" rows="2">                                                            </textarea>
+                                     </div>
+                                    
+                                  </form>
+
+                                  <div class="  row ">
+                                    <div class="col-sm-6 ">
+                                        <button class="btn btn-primary btn-block btn-mail text-center mb-0 mt-0 w-100" type="button"><i class=" me-2"></i>جدولة</button> 
+                                      </div>
+                                      <div class="col-sm-6 ">
+                                        <button class="btn btn-primary btn-block btn-mail text-center mb-0 mt-0 w-100" type="button"><i class="fa fa-paper-plane me-2"></i>ارسال</button> 
+                                      </div>
+                                 </div>
+
+                               </div>
+                            </div>
+                         </div>
+                         <div class="tab-pane fade" id="pills-darkprofile" role="tabpanel" aria-labelledby="pills-darkprofile-tab">
+                            <div class="email-content">
+                               <div class="email-top">
+                                  <div class="row">
+                                     <div class="col-md-6 xl-100 col-sm-12">
+                                        <div class="media">
+                                           <img class="me-3 rounded-circle" src="<?php echo e(asset('assets/images/user/user.png')); ?>" alt="">
+                                           <div class="media-body">
+                                              <h6>Lorm lpsa  <small><span>(20</span> January) <span>6:00</span> AM</small></h6>
+                                              <p>Mattis luctus. Donec nisi diam text.</p>
+                                           </div>
+                                        </div>
+                                     </div>
+                                     <div class="col-md-6 xl-100 col-sm-12">
+                                        <div class="float-end d-flex">
+                                           <p class="user-emailid">Lormlpsa<span>23</span>@company.com</p>
+                                           <i class="fa fa-star-o f-18 mt-1"></i>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </div>
+                               <div class="email-wrapper">
+                                  <p>Hello</p>
+                                  <p>Dear Sir Good Morning,</p>
+                                  <h5>Elementum varius nisi vel tempus. Donec eleifend egestas viverra.</h5>
+                                  <p class="m-b-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non diam facilisis, commodo libero et, commodo sapien. Pellentesque sollicitudin massa sagittis dolor facilisis, sit amet vulputate nunc molestie. Pellentesque maximus nibh id luctus porta. Ut consectetur dui nec nulla mattis luctus. Donec nisi diam, congue vitae felis at, ullamcorper bibendum tortor. Vestibulum pellentesque felis felis. Etiam ac tortor felis. Ut elit arcu, rhoncus in laoreet vel, gravida sed tortor.</p>
+                                  <p>In elementum varius nisi vel tempus. Donec eleifend egestas viverra. Donec dapibus sollicitudin blandit. Donec scelerisque purus sit amet feugiat efficitur. Quisque feugiat semper sapien vel hendrerit. Mauris lacus felis, consequat nec pellentesque viverra, venenatis a lorem. Sed urna lectus.Quisque feugiat semper sapien vel hendrerit</p>
+                                  <hr>
+                                  <div class="d-inline-block">
+                                     <h6 class="text-muted"><i class="icofont icofont-clip"></i> ATTACHMENTS</h6>
+                                     <a class="text-muted text-end right-download" href="#"><i class="fa fa-long-arrow-down me-2"></i>Download All</a>
+                                     <div class="clearfix"></div>
+                                  </div>
+                                  <div class="attachment">
+                                     <ul class="list-inline">
+                                        <li class="list-inline-item"><img class="img-fluid" src="<?php echo e(asset('assets/images/email/1.jpg')); ?>" alt=""></li>
+                                        <li class="list-inline-item"><img class="img-fluid" src="<?php echo e(asset('assets/images/email/2.jpg')); ?>" alt=""></li>
+                                        <li class="list-inline-item"><img class="img-fluid" src="<?php echo e(asset('assets/images/email/3.jpg')); ?>" alt=""></li>
+                                     </ul>
+                                  </div>
+                                  <hr>
+                                  <div class="action-wrapper">
+                                     <ul class="actions">
+                                        <li><a class="text-muted" href="#"><i class="fa fa-reply me-2"></i>Reply</a></li>
+                                        <li><a class="text-muted" href="#"><i class="fa fa-reply-all me-2"></i>Reply All</a></li>
+                                        <li><a class="text-muted" href="#"><i class="fa fa-share me-2"></i></a>Forward</li>
+                                     </ul>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+
+       </div>
+    </div>
+ </div>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('script'); ?>
+<script src="<?php echo e(asset('assets/js/editor/ckeditor/ckeditor.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/js/editor/ckeditor/adapters/jquery.js')); ?>"></script>
+<script src="<?php echo e(asset('assets/js/email-app.js')); ?>"></script>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.simple.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\Cuba\resources\views/taqnnen/marketing/watsapp.blade.php ENDPATH**/ ?>
